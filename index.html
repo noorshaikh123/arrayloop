@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrayloop</title>
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+<body>
+    <h2 class="text">Students list</h2>
+    <div class="list" id="listid"></div>
+<script>
+let n= parseInt(prompt('enter the number of students'));
+const arr=[];
+for(let i=0;i<n;i++)
+{
+ arr[i]=prompt(`Enter ${i+1} student's name`);
+}
+
+const element = document.getElementById('listid');
+for(let i=0;i<n;i++){
+ element.innerHTML= element.innerHTML +  
+ `<div class="innerdiv">
+    ${arr[i]}
+  </div>`
+}
+</script>
+</body>
+</html>
